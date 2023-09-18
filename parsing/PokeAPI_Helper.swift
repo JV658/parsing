@@ -21,7 +21,7 @@ class PokeAPI_Helper{
         else {throw PokeAPI_Errors.CANNOT_CONVERT_STRING_TO_URL}
         
         do{
-            let (data, _) = try await URLSession.shared.data(from: url)
+            let (data, _) = try await URLSession.shared.data(from: url)
             
             //print(response)
             
