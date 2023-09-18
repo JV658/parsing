@@ -25,6 +25,15 @@ class BreedTableViewController: UITableViewController {
             mainBreeds = breeds.keys.sorted(by: <)
             print("post API call \(mainBreeds.count)")
             tableView.reloadData()
+            
+            do {
+                let abilities = try await PokeAPI_Helper.fetch()
+                for ability in abilities {
+                    print(ability.name)
+                }
+            } catch {
+                preconditionFailure("error\(error)")
+            }
         }
     }
 
