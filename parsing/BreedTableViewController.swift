@@ -23,6 +23,8 @@ class BreedTableViewController: UITableViewController {
         Task {
             breeds = await DogAPI_Helper.fetch()
             mainBreeds = breeds.keys.sorted(by: <)
+            print("post API call \(mainBreeds.count)")
+            tableView.reloadData()
         }
     }
 
@@ -35,7 +37,8 @@ class BreedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return breeds.count
+        print("pre API call: \(mainBreeds.count)")
+        return mainBreeds.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
