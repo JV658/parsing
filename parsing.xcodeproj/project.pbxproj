@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		DBD99D0C2AB8800F0058024A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD99D0B2AB8800F0058024A /* AppDelegate.swift */; };
 		DBD99D0E2AB8800F0058024A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD99D0D2AB8800F0058024A /* SceneDelegate.swift */; };
-		DBD99D102AB8800F0058024A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD99D0F2AB8800F0058024A /* ViewController.swift */; };
 		DBD99D132AB8800F0058024A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD99D112AB8800F0058024A /* Main.storyboard */; };
 		DBD99D152AB880100058024A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD99D142AB880100058024A /* Assets.xcassets */; };
 		DBD99D182AB880100058024A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD99D162AB880100058024A /* LaunchScreen.storyboard */; };
+		DBD99D202AB8803D0058024A /* DogAPI_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD99D1F2AB8803D0058024A /* DogAPI_Helper.swift */; };
+		DBD99D222AB8857B0058024A /* BreedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD99D212AB8857B0058024A /* BreedTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBD99D082AB8800F0058024A /* parsing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parsing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD99D0B2AB8800F0058024A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD99D0D2AB8800F0058024A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBD99D0F2AB8800F0058024A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBD99D122AB8800F0058024A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBD99D142AB880100058024A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBD99D172AB880100058024A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBD99D192AB880100058024A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBD99D1F2AB8803D0058024A /* DogAPI_Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI_Helper.swift; sourceTree = "<group>"; };
+		DBD99D212AB8857B0058024A /* BreedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				DBD99D0B2AB8800F0058024A /* AppDelegate.swift */,
 				DBD99D0D2AB8800F0058024A /* SceneDelegate.swift */,
-				DBD99D0F2AB8800F0058024A /* ViewController.swift */,
+				DBD99D212AB8857B0058024A /* BreedTableViewController.swift */,
+				DBD99D1F2AB8803D0058024A /* DogAPI_Helper.swift */,
 				DBD99D112AB8800F0058024A /* Main.storyboard */,
 				DBD99D142AB880100058024A /* Assets.xcassets */,
 				DBD99D162AB880100058024A /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBD99D102AB8800F0058024A /* ViewController.swift in Sources */,
+				DBD99D202AB8803D0058024A /* DogAPI_Helper.swift in Sources */,
 				DBD99D0C2AB8800F0058024A /* AppDelegate.swift in Sources */,
+				DBD99D222AB8857B0058024A /* BreedTableViewController.swift in Sources */,
 				DBD99D0E2AB8800F0058024A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
