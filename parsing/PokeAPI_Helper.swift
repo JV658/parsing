@@ -16,7 +16,7 @@ enum PokeAPI_Errors: Error {
 class PokeAPI_Helper{
     static private let baseURL_String = "https://pokeapi.co/api/v2/pokemon/ditto"
     
-    static public func fetch() async throws -> [Ability]{
+    static public func fetch() async throws -> Pokemon{
         guard
             let url = URL(string: baseURL_String)
         else {throw PokeAPI_Errors.CANNOT_CONVERT_STRING_TO_URL}
@@ -24,26 +24,13 @@ class PokeAPI_Helper{
         do{
             let (data, _) = try await URLSession.shared.data(from: url)
                         
-            let jsonObject = try JSONSerialization.jsonObject(with: data)
-        
-            guard
-                let jsonDictionary = jsonObject as? [AnyHashable:Any],
-                let result = jsonDictionary["abilities"] as? [[String:Any]]
-            else {throw PokeAPI_Errors.CANNOT_PARSE_JSON_DATA}
+            let decoder = JSONDecoder()
             
-            var abilities: [Ability] = []
-            for ability in result {
-                guard
-                    let abDictionary = ability as? [AnyHashable:Any],
-                    let ab = abDictionary["ability"] as? [String: String],
-                    let name = ab["name"],
-                    let url = ab["url"]
-                else { preconditionFailure("error")}
-                let newAbility = Ability(name: name, url: url)
-                abilities.append(newAbility)
-            }
+            let pokemon = try decoder.decode(Pokemon.self, from: data)
             
-            return abilities
+            print(pokemon)
+            
+            return pokemon
         } catch {
             throw error
         }

@@ -23,14 +23,12 @@ class BreedTableViewController: UITableViewController {
         Task {
             breeds = await DogAPI_Helper.fetch()
             mainBreeds = breeds.keys.sorted(by: <)
-            print("post API call \(mainBreeds.count)")
+//            print("post API call \(mainBreeds.count)")
             tableView.reloadData()
             
             do {
-                let abilities = try await PokeAPI_Helper.fetch()
-                for ability in abilities {
-                    print(ability.name)
-                }
+                let pokemon = try await PokeAPI_Helper.fetch()
+//                print(pokemon)
             } catch {
                 preconditionFailure("error\(error)")
             }
